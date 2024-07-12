@@ -1,181 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- special title -->
-    <script>
-      window.addEventListener("blur", () => {
-        document.title = "Come back ";
-      });
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<title>Rem01Gaimg | Portofolio</title>
 
-      window.addEventListener("focus", () => {
-        document.title = "Rem01Gaming";
-      });
-    </script>
-    <!-- meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=1024" />
-    <meta property="og:url" content="https://rem01gaming.github.io/" />
-    <meta property="og:site_name" content="Rem01Gaming" />
-    <meta property="og:description" content="Yet another ordinary student." />
-    <meta property="og:locale" content="en" />
-    <meta name="twitter:title" content="Rem01Gaming" />
-    <meta name="twitter:description" content="Yet another ordinary student." />
-    <meta name="twitter:url" content="https://rem01gaming.github.io/" />
-    <link
-      rel="icon"
-      href="./assets/image/favicon/favicon.png"
-      type="image/png"
-    />
-    <!-- css -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link href="./assets/css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav class="navbar bg-body-tertiary shadow">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            class="nav-icon rounded-circle"
-            src="./assets/image/icons/pfp.jpg"
-            alt="pfp"
-          />
-        </a>
-      </div>
-    </nav>
+		<meta property="og:type" content="website" />
+		<!-- website, blog -->
+		<meta property="og:url" content="https://rem01gaming.github.io/" />
+		<meta property="og:image" content="https://rem01gaming.github.io/assets/ogp.png" />
+		<meta property="og:site_name" content="Rem01Gaimg | Portofolio" />
+		<meta
+			property="og:description"
+			content="My name is Rem01Gaming, I'm a Android developer and I'm passionate about it."
+		/>
+		<meta property="og:locale" content="en_US" />
 
-    <!-- hero -->
-    <section class="jumbotron text-center">
-      <img
-        class="rounded-circle img-thumbnail"
-        src="./assets/image/icons/pfp.jpg"
-        alt="pfp"
-        width="200"
-      />
-      <h1 class="display-4">Rem01Gaming</h1>
-      <p class="lead">Yet another ordinary student</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,32L60,58.7C120,85,240,139,360,138.7C480,139,600,85,720,96C840,107,960,181,1080,181.3C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://rem01gaming.github.io/assets/ogp.png" />
+		<meta name="twitter:title" content="Rem01Gaimg | Portofolio" />
+		<meta
+			name="twitter:description"
+			content="My name is Rem01Gaming, I'm a Android developer and I'm passionate about it."
+		/>
+		<meta name="twitter:url" content="https://rem01gaming.github.io/" />
+		<meta name="theme-color" content="#0e1019" />
 
-    <!-- about -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4 mb-3">
-            <p>
-              My name is Wisnu Gunawan, I'm 15yo and living in Kudus, Central Java, Indonesia. My hobbies are Coding and designing random stuff.
-            </p>
-          </div>
-          <div class="col-md-4 mb-3">
-            <p>
-              I'm currently learning about programming and Android development. I have been making some open source projects for quite some times now, there's not much to show here.
-            </p>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#e2edff"
-          fill-opacity="1"
-          d="M0,128L34.3,106.7C68.6,85,137,43,206,53.3C274.3,64,343,128,411,176C480,224,549,256,617,256C685.7,256,754,224,823,197.3C891.4,171,960,149,1029,144C1097.1,139,1166,149,1234,154.7C1302.9,160,1371,160,1406,160L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+		<link rel="icon" type="image/png" href="./assets/favicon.png" sizes="64x64" />
+		<link rel="icon" type="image/png" href="./assets/android-chrome.png" sizes="192x192" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div>
+				<img src="assets/my_pfp.jpg" alt="my_pfp" />
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
 
-    <!-- projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>My Projects</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img
-                src="./assets/image/misc/origami-kernel.png"
-                class="card-img-top"
-                alt="Origami Kernel Manager"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Origami Kernel Manager</h5>
-                <p class="card-text">
-                  Yet another kernel manager, in termux. fully written in bash.
-                </p>
-                <a
-                  href="https://github.com/Rem01Gaming/origami_kernel_manager"
-                  class="btn btn-primary"
-                  >See in GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img
-                src="./assets/image/misc/mtkfest.jpg"
-                class="card-img-top"
-                alt="mtkfest"
-              />
-              <div class="card-body">
-                <h5 class="card-title">MTKFEST Tweak</h5>
-                <p class="card-text">
-                  Special performance script for Mediatek.
-                </p>
-                <a
-                  href="https://github.com/Rem01Gaming/mtkfest"
-                  class="btn btn-primary"
-                  >See in GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img
-                src="./assets/image/misc/liquid_kernel.jpg"
-                class="card-img-top"
-                alt="liquid_kernel"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Liquid Kernel</h5>
-                <p class="card-text">
-                  Custom kernel for Realme C25/s and Narzo 50A (even), under the auspices of org <a href="https://t.me/liquidprjkt">liquidprjkt.</a>
-                </p>
-                <a
-                  href="https://github.com/Rem01Gaming/liquid_kernel_realme_even"
-                  class="btn btn-primary"
-                  >See in GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<main class="container">
+			<article id="home">
+				<img src="assets/my_pfp.jpg" alt="my_pfp" />
+				<h4>Rem01Gaming</h4>
+				<h1>Open Source Developer</h1>
+				<p>
+					A random 15yo who currently focused on Android Development. Other than that, I also interested in Web
+					Development and Open Source stuff. I love to learn new things and always open to new opportunities.
+				</p>
+			</article>
+			<article id="about">
+				<h1>About Me</h1>
+				<p>A brief introduction about me and my interest.</p>
+				<button onclick="document.location.href = 'whoami/index.html'">Click Here</button>
+			</article>
+			<article id="projects">
+				<h1>My Projects</h1>
+				<div class="project-container">
+					<div class="project-card">
+						<img src="./assets/origami-kernel.png" alt="Origami Kernel Manager" />
+						<div class="card-content">
+							<h3>Origami Kernel Manager</h3>
+							<p>Yet another kernel manager, in termux. fully written in bash.</p>
+						</div>
+						<a href="https://github.com/Rem01Gaming/origami_kernel_manager" target="_blank" class="btn">See in GitHub</a>
+					</div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+					<div class="project-card">
+						<img src="./assets/mtkfest.jpg" alt="mtkfest" />
+						<div class="card-content">
+							<h3>Mtkfest Tweaks</h3>
+							<p>A performance magisk module designed specifically for Mediatek.</p>
+						</div>
+						<a href="https://github.com/Rem01Gaming/mtkfest" target="_blank" class="btn">See in GitHub</a>
+					</div>
+
+					<div class="project-card">
+						<img src="./assets/liquid_kernel.jpg" alt="liquid_kernel" />
+						<div class="card-content">
+							<h3>Liquid Kernel</h3>
+							<p>
+								Custom kernel for Realme C25/s and Narzo 50A (even), under the auspices of org
+								<a href="https://t.me/liquidprjkt">liquidprjkt.</a>
+							</p>
+						</div>
+						<a href="https://github.com/Rem01Gaming/liquid_kernel_realme_even" target="_blank" class="btn">See in GitHub</a>
+					</div>
+
+					<div class="project-card">
+						<img src="./assets/encore.jpg" alt="encore" />
+						<div class="card-content">
+							<h3>Encore Tweaks</h3>
+							<p>A performance magisk module, succesor from Mtkfest Tweaks and rewritten in C.</p>
+						</div>
+						<a href="https://github.com/Rem01Gaming/liquid_kernel_realme_even" target="_blank" class="btn">See in GitHub</a>
+					</div>
+				</div>
+			</article>
+			<article id="contact">
+				<h1>Get In Touch</h1>
+				<div>
+					<a href="https://github.com/rem01gaming" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+							<path
+								d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+							/></svg
+					></a>
+					<a href="https://rem01schannel.t.me" target="_blank">
+						<svg
+							stroke="currentColor"
+							fill="currentColor"
+							stroke-width="0"
+							viewBox="0 0 448 512"
+							class="w-6 h-6 hover:text-gray-900 dark:hover:text-gray-50"
+							height="2em"
+							width="2em"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
+							></path>
+						</svg>
+					</a>
+					<a href="https://tiktok.com/@rem01gaming" target="_blank">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							role="img"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+							class="d-block"
+							width="2em"
+							height="2em"
+						>
+							<title>TikTok</title>
+							<path
+								d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+								fill="currentColor"
+							></path>
+						</svg>
+					</a>
+					<a href="https://youtube.com/@rem01gaming" target="_blank">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 19.17 13.6"
+							aria-hidden="true"
+							class="d-block"
+							width="2em"
+							height="2em"
+						>
+							<path
+								d="M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z"
+								fill="currentColor"
+							></path>
+						</svg>
+					</a>
+				</div>
+			</article>
+		</main>
+	</body>
 </html>
