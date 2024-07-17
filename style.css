@@ -1,3 +1,13 @@
+*,
+html,
+body {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: white;
+}
+
 .navbar {
     width: 100%;
     display: flex;
@@ -11,11 +21,11 @@
 }
 
 .navbar div {
-        padding: 1vh 2vh 1vh 5vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+    padding: 1vh 2vh 1vh 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar img {
@@ -41,12 +51,8 @@
     text-shadow: 0px 0px 8px #7c72ff ;
 }
 
-*, html, body {
-    font-family: "Outfit", sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    color: white;
+main {
+    background-color: #0e1019;
 }
 
 article {
@@ -56,10 +62,6 @@ article {
     justify-content: center;
     min-height: 100vh;
     font-size: larger;
-}
-
-main {
-    background-color: #0e1019;
 }
 
 #home {
@@ -170,6 +172,7 @@ main {
     background-color: #0056b3;
 }
 
+/* For screens smaller than 1352px (typical desktop breakpoint) */
 @media (max-width: 1352px) {
     .navbar a {
         font-size: 16px;
@@ -182,6 +185,7 @@ main {
     }
 }
 
+/* For screens smaller than 992px (typical laptop breakpoint) */
 @media (max-width: 992px) {
     #home p {
         padding-left: 2vh;
@@ -245,5 +249,3 @@ main {
         font-size: small;
     }
 }
-
-
