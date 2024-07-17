@@ -106,7 +106,12 @@ main {
 
 #contact svg {
     fill: white;
-    margin: 1.2vh;
+    margin: 1.1vh;
+}
+
+#contact a {
+    color: transparent;
+    position: relative;
 }
 
 .project-container {
@@ -166,6 +171,10 @@ main {
 }
 
 @media (max-width: 1352px) {
+    .navbar a {
+        font-size: 16px;
+    }
+
     #home p {
         padding-left: 14vh;
         padding-right: 14vh;
@@ -188,7 +197,7 @@ main {
     }
 
     .navbar a {
-         font-size: 18px;
+         font-size: 15px;
     }
 
     .navbar ul {

@@ -1,0 +1,798 @@
+@charset "UTF-8";
+/*
+  Rain fx
+  Author: yama-dev - https://github.com/yama-dev
+  */
+
+[data-bg='rain'] .l-bg__item--rain {
+  opacity: 1;
+}
+
+.l-rain-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.l-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.l-rain-wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: '';
+}
+
+.is-load .l-rain-wrap::before {
+  opacity: 1;
+  -webkit-transition: opacity 1s 2s;
+  transition: opacity 1s 2s;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  45%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  45%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes drop-1 {
+  0% {
+    -webkit-transform: translate3d(-10px, -200px, 0);
+    transform: translate3d(-10px, -200px, 0);
+  }
+  50%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes drop-1 {
+  0% {
+    -webkit-transform: translate3d(-10px, -200px, 0);
+    transform: translate3d(-10px, -200px, 0);
+  }
+  50%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes drop-2 {
+  0% {
+    -webkit-transform: translate3d(0, -700px, 0);
+    transform: translate3d(0, -700px, 0);
+  }
+  50%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes drop-2 {
+  0% {
+    -webkit-transform: translate3d(0, -700px, 0);
+    transform: translate3d(0, -700px, 0);
+  }
+  50%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.l-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  background: url(./assets/release_bg_rain_pc.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.l-rain path {
+  fill: #ffffff;
+}
+
+.l-rain__drop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 37px;
+}
+
+.l-rain__drop span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.l-rain__drop span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: fadeInOut 1.5s infinite both, drop-1 1.5s infinite;
+  animation: fadeInOut 1.5s infinite both, drop-1 1.5s infinite;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: '';
+}
+
+.l-rain__drop .rain__drop {
+  left: -20px;
+  -webkit-animation: fadeInOut 1.5s infinite both, drop-2 1.5s infinite;
+  animation: fadeInOut 1.5s infinite both, drop-2 1.5s infinite;
+}
+
+.l-rain__drop:nth-of-type(1) {
+  top: 14%;
+  left: 81%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(1) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.l-rain__drop:nth-of-type(1) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.l-rain__drop:nth-of-type(2) {
+  top: 79%;
+  left: 87%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(2) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+
+.l-rain__drop:nth-of-type(2) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.l-rain__drop:nth-of-type(3) {
+  top: 10%;
+  left: 100%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(3) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.l-rain__drop:nth-of-type(3) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(4) {
+  top: 44%;
+  left: 62%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(4) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.l-rain__drop:nth-of-type(4) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+.l-rain__drop:nth-of-type(5) {
+  top: 18%;
+  left: 42%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(5) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.l-rain__drop:nth-of-type(5) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.l-rain__drop:nth-of-type(6) {
+  top: 90%;
+  left: 87%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(6) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.l-rain__drop:nth-of-type(6) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.l-rain__drop:nth-of-type(7) {
+  top: 25%;
+  left: 70%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(7) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.l-rain__drop:nth-of-type(7) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.l-rain__drop:nth-of-type(8) {
+  top: 95%;
+  left: 72%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(8) span::before {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.l-rain__drop:nth-of-type(8) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+.l-rain__drop:nth-of-type(9) {
+  top: 22%;
+  left: 65%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(9) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.l-rain__drop:nth-of-type(9) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.l-rain__drop:nth-of-type(10) {
+  top: 17%;
+  left: 28%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(10) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.l-rain__drop:nth-of-type(10) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(11) {
+  top: 71%;
+  left: 36%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(11) span::before {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+.l-rain__drop:nth-of-type(11) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(12) {
+  top: 33%;
+  left: 99%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(12) span::before {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+.l-rain__drop:nth-of-type(12) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s;
+}
+
+.l-rain__drop:nth-of-type(13) {
+  top: 69%;
+  left: 50%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(13) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.l-rain__drop:nth-of-type(13) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.l-rain__drop:nth-of-type(14) {
+  top: 7%;
+  left: 31%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(14) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(14) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.l-rain__drop:nth-of-type(15) {
+  top: 96%;
+  left: 44%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(15) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.l-rain__drop:nth-of-type(15) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(16) {
+  top: 27%;
+  left: 33%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(16) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.l-rain__drop:nth-of-type(16) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.l-rain__drop:nth-of-type(17) {
+  top: 41%;
+  left: 11%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(17) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s;
+}
+
+.l-rain__drop:nth-of-type(17) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(18) {
+  top: 72%;
+  left: 74%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(18) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.l-rain__drop:nth-of-type(18) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+.l-rain__drop:nth-of-type(19) {
+  top: 94%;
+  left: 51%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(19) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+.l-rain__drop:nth-of-type(19) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.l-rain__drop:nth-of-type(20) {
+  top: 51%;
+  left: 27%;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(20) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.l-rain__drop:nth-of-type(20) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+.l-rain__drop:nth-of-type(21) {
+  top: 33%;
+  left: 78%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(21) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.l-rain__drop:nth-of-type(21) .rain__drop {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.l-rain__drop:nth-of-type(22) {
+  top: 98%;
+  left: 50%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(22) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+
+.l-rain__drop:nth-of-type(22) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+
+.l-rain__drop:nth-of-type(23) {
+  top: 8%;
+  left: 98%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(23) span::before {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.l-rain__drop:nth-of-type(23) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.l-rain__drop:nth-of-type(24) {
+  top: 89%;
+  left: 47%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(24) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.l-rain__drop:nth-of-type(24) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.l-rain__drop:nth-of-type(25) {
+  top: 18%;
+  left: 69%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 39px;
+}
+
+.l-rain__drop:nth-of-type(25) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+.l-rain__drop:nth-of-type(25) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.l-rain__drop:nth-of-type(26) {
+  top: 33%;
+  left: 43%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  height: 20px;
+}
+
+.l-rain__drop:nth-of-type(26) span::before {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+.l-rain__drop:nth-of-type(26) .rain__drop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+.l-rain__drop:nth-of-type(27) {
+  top: 33%;
+  left: 18%;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  height: 37px;
+}
+
+.l-rain__drop:nth-of-type(27) span::before {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.l-rain__drop:nth-of-type(27) .rain__drop {
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.l-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.l-rain-wrap {
+  position: relative;
+}
+
+.l-rain-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.l-rain-bg canvas {
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+}
