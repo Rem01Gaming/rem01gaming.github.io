@@ -8,6 +8,23 @@ body {
     color: white;
 }
 
+main {
+    background-color: #0e1019;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: larger;
+}
+
+/*============================
+  navbar
+============================*/
+
 .navbar {
     width: 100%;
     display: flex;
@@ -51,18 +68,9 @@ body {
     text-shadow: 0px 0px 8px #7c72ff ;
 }
 
-main {
-    background-color: #0e1019;
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-size: larger;
-}
+/*============================
+  home
+============================*/
 
 #home {
     gap: 2vh;
@@ -78,6 +86,10 @@ article {
     padding-left: 28vh;
     padding-right: 28vh;
 }
+
+/*============================
+  about
+============================*/
 
 #about {
     gap: 2vh;
@@ -98,28 +110,12 @@ article {
     background-color: #0e1019;
 }
 
+/*============================
+  projects
+============================*/
+
 #projects {
     gap: 2vh;
-}
-
-#contact {
-    gap: 2vh;
-}
-
-#contact svg {
-    fill: white;
-    margin: 1.1vh;
-}
-
-#contact a {
-    color: transparent;
-    position: relative;
-}
-
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .project-card {
@@ -171,6 +167,35 @@ article {
 .btn:hover {
     background-color: #0056b3;
 }
+
+/*============================
+  contact
+============================*/
+
+#contact {
+    gap: 2vh;
+}
+
+#contact svg {
+    fill: white;
+    margin: 1.1vh;
+}
+
+#contact a {
+    color: transparent;
+    position: relative;
+    text-decoration: none;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*============================
+  RDW Media Query
+============================*/
 
 /* For screens smaller than 1352px (typical desktop breakpoint) */
 @media (max-width: 1352px) {
